@@ -19,12 +19,12 @@ from pathlib import Path
 PORT = int(os.environ.get('PORT', 3000))       # http服务端口
 SUB_PATH = os.environ.get('SUB_PATH', 'sub')   # 订阅token
 config = {
-    'UUID': os.environ.get('UUID', 'b5c445d1-8e59-465f-af0c-1f4193d15693'), # 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
+    'UUID': os.environ.get('UUID', '904d2605-e35b-4a10-900e-1d27c8fd4781'), # 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
     'NEZHA_SERVER': os.environ.get('NEZHA_SERVER', ''), # 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
     'NEZHA_PORT': os.environ.get('NEZHA_PORT', ''),     # 哪吒v1请留空，哪吒v0 agent端口
     'NEZHA_KEY': os.environ.get('NEZHA_KEY', ''),       # 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
-    'ARGO_DOMAIN': os.environ.get('ARGO_DOMAIN', ''),   # 固定隧道域名,留空即启用临时隧道
-    'ARGO_AUTH': os.environ.get('ARGO_AUTH', ''),       # 固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
+    'ARGO_DOMAIN': os.environ.get('ARGO_DOMAIN', 'www.volur.kdns.fr'),   # 固定隧道域名,留空即启用临时隧道
+    'ARGO_AUTH': os.environ.get('ARGO_AUTH', 'eyJhIjoiYTk0MjkxMjkzOTUwYTBiNDFhNWUzNTM3NzFmNzE2ZGYiLCJ0IjoiOTA0ZDI2MDUtZTM1Yi00YTEwLTkwMGUtMWQyN2M4ZmQ0NzgxIiwicyI6Ik16Sm1NMkUyTTJRdE16UXlOaTAwTldRMExXSXpaV1l0WTJNeE5qYzJPR1V6T1RkbSJ9'),       # 固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
     'ARGO_PORT': os.environ.get('ARGO_PORT', '8001'),   # argo端口 使用固定隧道token,cloudflare后台设置的端口需和这里对应
     'CFIP': os.environ.get('CFIP', 'saas.sin.fan'),     # 优选域名或优选ip
     'CFPORT': os.environ.get('CFPORT', '443'),          # 优选域名或优选ip对应端口
